@@ -437,9 +437,6 @@ footer {
   padding-top: 0;
 }
 
-.organizer-group {
-  padding: 0 16px;
-}
 
 .organizer-group ul {
   list-style: none;
@@ -458,15 +455,37 @@ footer {
 }
 
 .organizer-group {
-  padding: 0;
+  padding: 0 16px;
   transform: translateY(-4px);
+}
+
+/* ORGANIZATIONAL SUPPORT */
+
+.acknowledgements-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.acknowledgements-row > .section-label {
+  padding-top: 0;
+}
+
+.acknowledgements-text {
+  padding: 0 16px;
+}
+
+.acknowledgements-text p {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text);
 }
 
 
 @media (max-width: 600px) {
 
   /* HEADER */
-
   .hero {
     padding: 26px 0 24px;
   }
@@ -481,28 +500,19 @@ footer {
     font-size: 0.76rem;
   }
 
-
   /* SECTIONS */
-
   .schedule-section {
     padding: 36px 0;
   }
-
-@media (max-width: 600px) {
 
   .section-header {
     grid-template-columns: 1fr;
     gap: 5px;
     margin-bottom: 18px;
-
     padding: 0 8px;
   }
 
-}
-
-
   /* TALKS */
-
   .talk summary {
     grid-template-columns: 60px 1fr 24px;
     gap: 10px;
@@ -518,18 +528,14 @@ footer {
     padding: 0 35px 20px 8px;
   }
 
-
-  /* LUNCH / COFFEE BREAK / DINNER */
-
+  /* BREAKS */
   article.talk.break {
     grid-template-columns: 60px 1fr;
     gap: 10px;
     padding: 15px 8px;
   }
 
-
   /* PARTICIPANTS */
-
   .participants-row {
     grid-template-columns: 1fr;
     gap: 0;
@@ -554,9 +560,7 @@ footer {
     margin-bottom: 8px;
   }
 
-
   /* ORGANIZERS */
-
   .organizers-row {
     grid-template-columns: 1fr;
     gap: 0;
@@ -571,7 +575,17 @@ footer {
     transform: none;
   }
 
-  .organizer-group + .organizer-group {
-    margin-top: 0;
+  /* ORGANIZATIONAL SUPPORT */
+  .acknowledgements-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .acknowledgements-row > .section-label {
+    margin-bottom: 20px;
+  }
+
+  .acknowledgements-text {
+    padding: 0;
   }
 }
